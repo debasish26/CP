@@ -36,8 +36,7 @@ int main()
                 ans = min(ans, 2LL);
         }
         cout << ans << endl;
+        
     }
     return 0;
 }
-
-

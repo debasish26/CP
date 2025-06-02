@@ -33,10 +33,10 @@ int main(){
             int left = n - total;
             if(cost_cap[i].second <= left){
                 total = total + cost_cap[i].second;
-                cost = cost + cost_cap[i].first * 1LL * cost_cap[i].second;
+                cost = cost + cost_cap[i].first * cost_cap[i].second;
             } else {
                 total = n;
-                cost = cost + left * 1LL * cost_cap[i].first;
+                cost = cost + left * cost_cap[i].first;
             }
         }
         cout << cost << endl;
