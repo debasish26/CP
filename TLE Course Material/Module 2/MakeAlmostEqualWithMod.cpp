@@ -16,7 +16,7 @@ int main()
             cin >> it;
         for (int i = 1; i <= 61; i++)
         {
-            long long num = (1LL << i);
+            long long num = (1LL << i); // 2 ^ i
             set<long long> st;
             for (int j = 0; j < n; j++)
             {
