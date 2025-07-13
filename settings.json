@@ -333,3 +333,15 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false
 }
+
+
+sudo mkdir -p /mnt/sysimage
+sudo mount -o subvol=root /dev/nvme0n1p7 /mnt/sysimage
+sudo mount /dev/nvme0n1p6 /mnt/sysimage/boot
+sudo mount /dev/nvme0n1p1 /mnt/sysimage/boot/efi
+
+for d in dev proc sys run; do
+  sudo mount --bind /$d /mnt/sysimage/$d
+done
+
+sudo chroot /mnt/sysimage /usr/bin/bash
